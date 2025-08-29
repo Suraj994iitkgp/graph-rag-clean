@@ -1,19 +1,18 @@
+@"
 # Python
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
-*.log
 
-# Virtual environment
+# Virtual envs
 venv/
 env/
 rag-env/
 
-# VSCode / PyCharm
+# Editors
 .vscode/
 .idea/
 
-# OS
+# OS stuff
 .DS_Store
 Thumbs.db
+"@ > .gitignore
