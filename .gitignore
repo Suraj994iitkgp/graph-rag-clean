@@ -17,3 +17,8 @@ env/
 # OS
 .DS_Store
 Thumbs.db
+echo "rag-env/" >> .gitignore
+echo "venv/" >> .gitignore
+echo "env/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
