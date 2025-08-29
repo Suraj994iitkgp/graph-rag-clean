@@ -1,4 +1,4 @@
-# Graph-RAG Based Chatbot for Car Brake System Analysis
+# Graph-RAG Based Chatbot for Automated Car Brake System Analysis
 
 We have developed a **Graph-RAG based chatbot** that helps answer questions related to **understanding the input-output relationships in a car’s brake system**. This chatbot is essential for modeling causal relationships between the driver, sensors, and environmental factors affecting braking performance and system states, useful for detection, diagnostics, and recommendation purposes in repair manuals.
 
