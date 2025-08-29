@@ -8,7 +8,7 @@ __pycache__/
 # Virtual environment
 venv/
 env/
-.rag-env/
+rag-env/
 
 # VSCode / PyCharm
 .vscode/
@@ -17,8 +17,3 @@ env/
 # OS
 .DS_Store
 Thumbs.db
-echo "rag-env/" >> .gitignore
-echo "venv/" >> .gitignore
-echo "env/" >> .gitignore
-echo "__pycache__/" >> .gitignore
-echo "*.pyc" >> .gitignore
