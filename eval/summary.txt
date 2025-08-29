@@ -1,0 +1,4 @@
+items_evaluated: 30
+hit_at_5: 1.0
+mrr: 0.958
+avg_semantic_similarity: 0.462

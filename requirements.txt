@@ -1,0 +1,12 @@
+fastapi
+uvicorn[standard]
+python-dotenv
+pinecone-client
+openai
+networkx
+spacy
+python-multipart
+aiofiles
+tqdm
+requests
+pdfplumber

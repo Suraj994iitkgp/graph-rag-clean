@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>RAG Chat UI</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 900px; margin: 20px auto; }
+      #chatbox { border:1px solid #ccc; height:500px; padding:10px; overflow:auto; }
+      .user { color: blue; margin: 8px 0; }
+      .bot { color: #056d55; margin: 8px 0; }
+      .sources { font-size: 0.9em; color: #666; margin-top: 6px; }
+    </style>
+</head>
+<body>
+    <h2>Automated Braking System Chatbot</h2>
+    <div id="chatbox"></div>
+    <input id="q" type="text" style="width:75%;" placeholder="Ask about ABS, EBD, ESC..." />
+    <button onclick="ask()">Send</button>
+
+    <script>
+      async function ask(){
+        const q = document.getElementById("q").value.trim();
+        if(!q) return;
+        const chat = document.getElementById("chatbox");
+        chat.innerHTML += `<div class="user"><b>You:</b> ${q}</div>`;
+        document.getElementById("q").value = "";
+        chat.scrollTop = chat.scrollHeight;
+
+        const r = await fetch(`/ask?query=${encodeURIComponent(q)}`);
+        const j = await r.json();
+        const ans = j.answer || j.error || "No answer";
+        chat.innerHTML += `<div class="bot"><b>Bot:</b> ${ans.replace(/\n/g,'<br>')}</div>`;
+        if(j.sources && j.sources.length){
+          chat.innerHTML += `<div class="sources"><b>Sources:</b> ${j.sources.join(", ")}</div>`;
+        }
+        chat.scrollTop = chat.scrollHeight;
+      }
+    </script>
+</body>
+</html>
