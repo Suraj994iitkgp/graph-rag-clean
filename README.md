@@ -23,7 +23,7 @@ We have developed a **Graph-RAG based chatbot** that helps answer questions rela
 
 ## Screenshot
 
-![Chatbot Screenshot](images/GraphRAG_BASED_CHATBOT.png)
+![Chatbot Screenshot](images/GraphRAG_CHATBOT1.png)
 
 ---
 
